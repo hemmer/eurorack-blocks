@@ -99,9 +99,9 @@ package: all resources ../plugin.json ../panel_vcvrack.svg
 	@cp ../panel_vcvrack.svg $(CONFIGURATION)/package/res/panel_vcvrack.svg
 
 install: package
-	@echo "INSTALL $(RACK_USER_DIR)/plugins-v1/%module.name%/"
-	@mkdir -p $(RACK_USER_DIR)/plugins-v1/%module.name%
-	@cp -r $(CONFIGURATION)/package/* $(RACK_USER_DIR)/plugins-v1/%module.name%/
+	@echo "INSTALL $(RACK_USER_DIR)/plugins/%module.name%/"
+	@mkdir -p $(RACK_USER_DIR)/plugins/%module.name%
+	@cp -r $(CONFIGURATION)/package/* $(RACK_USER_DIR)/plugins/%module.name%/
 
 .PHONY: package install resources
 .DEFAULT_GOAL := all
